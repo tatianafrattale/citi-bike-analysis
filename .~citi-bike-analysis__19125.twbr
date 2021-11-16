@@ -1,0 +1,2500 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20213.21.0917.1006                               -->
+<workbook source-build='2021.3.1 (20213.21.0917.1006)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='citi-bike-analysis_16370427748900' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='JC-202109-citibike-tripdata' inline='true' name='federated.133t8g60ye57ed146fmqd1obvfx5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='JC-202109-citibike-tripdata' name='textscan.1hi13gw0nl7ilc16j4lj31k33lxx'>
+            <connection class='textscan' directory='/Users/tatianafrattale/Downloads' filename='JC-202109-citibike-tripdata.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1hi13gw0nl7ilc16j4lj31k33lxx' name='JC-202109-citibike-tripdata.csv' table='[JC-202109-citibike-tripdata#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='ride_id' ordinal='0' />
+            <column datatype='string' name='rideable_type' ordinal='1' />
+            <column datatype='datetime' name='started_at' ordinal='2' />
+            <column datatype='datetime' name='ended_at' ordinal='3' />
+            <column datatype='string' name='start_station_name' ordinal='4' />
+            <column datatype='string' name='start_station_id' ordinal='5' />
+            <column datatype='string' name='end_station_name' ordinal='6' />
+            <column datatype='string' name='end_station_id' ordinal='7' />
+            <column datatype='real' name='start_lat' ordinal='8' />
+            <column datatype='real' name='start_lng' ordinal='9' />
+            <column datatype='real' name='end_lat' ordinal='10' />
+            <column datatype='real' name='end_lng' ordinal='11' />
+            <column datatype='string' name='member_casual' ordinal='12' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1hi13gw0nl7ilc16j4lj31k33lxx' name='JC-202109-citibike-tripdata.csv' table='[JC-202109-citibike-tripdata#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='ride_id' ordinal='0' />
+            <column datatype='string' name='rideable_type' ordinal='1' />
+            <column datatype='datetime' name='started_at' ordinal='2' />
+            <column datatype='datetime' name='ended_at' ordinal='3' />
+            <column datatype='string' name='start_station_name' ordinal='4' />
+            <column datatype='string' name='start_station_id' ordinal='5' />
+            <column datatype='string' name='end_station_name' ordinal='6' />
+            <column datatype='string' name='end_station_id' ordinal='7' />
+            <column datatype='real' name='start_lat' ordinal='8' />
+            <column datatype='real' name='start_lng' ordinal='9' />
+            <column datatype='real' name='end_lat' ordinal='10' />
+            <column datatype='real' name='end_lng' ordinal='11' />
+            <column datatype='string' name='member_casual' ordinal='12' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[JC-202109-citibike-tripdata.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ride_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ride_id]</local-name>
+            <parent-name>[JC-202109-citibike-tripdata.csv]</parent-name>
+            <remote-alias>ride_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rideable_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rideable_type]</local-name>
+            <parent-name>[JC-202109-citibike-tripdata.csv]</parent-name>
+            <remote-alias>rideable_type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>started_at</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[started_at]</local-name>
+            <parent-name>[JC-202109-citibike-tripdata.csv]</parent-name>
+            <remote-alias>started_at</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ended_at</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[ended_at]</local-name>
+            <parent-name>[JC-202109-citibike-tripdata.csv]</parent-name>
+            <remote-alias>ended_at</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start_station_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start_station_name]</local-name>
+            <parent-name>[JC-202109-citibike-tripdata.csv]</parent-name>
+            <remote-alias>start_station_name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start_station_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start_station_id]</local-name>
+            <parent-name>[JC-202109-citibike-tripdata.csv]</parent-name>
+            <remote-alias>start_station_id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end_station_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end_station_name]</local-name>
+            <parent-name>[JC-202109-citibike-tripdata.csv]</parent-name>
+            <remote-alias>end_station_name</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end_station_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end_station_id]</local-name>
+            <parent-name>[JC-202109-citibike-tripdata.csv]</parent-name>
+            <remote-alias>end_station_id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start_lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start_lat]</local-name>
+            <parent-name>[JC-202109-citibike-tripdata.csv]</parent-name>
+            <remote-alias>start_lat</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start_lng</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start_lng]</local-name>
+            <parent-name>[JC-202109-citibike-tripdata.csv]</parent-name>
+            <remote-alias>start_lng</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end_lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end_lat]</local-name>
+            <parent-name>[JC-202109-citibike-tripdata.csv]</parent-name>
+            <remote-alias>end_lat</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end_lng</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end_lng]</local-name>
+            <parent-name>[JC-202109-citibike-tripdata.csv]</parent-name>
+            <remote-alias>end_lng</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>member_casual</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[member_casual]</local-name>
+            <parent-name>[JC-202109-citibike-tripdata.csv]</parent-name>
+            <remote-alias>member_casual</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='JC-202109-citibike-tripdata.csv' datatype='table' name='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='End Lat' datatype='real' name='[end_lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='End Lng' datatype='real' name='[end_lng]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='End Station Id' datatype='string' name='[end_station_id]' role='dimension' type='nominal' />
+      <column caption='End Station Name' datatype='string' name='[end_station_name]' role='dimension' type='nominal' />
+      <column caption='Ended At' datatype='datetime' name='[ended_at]' role='dimension' type='ordinal' />
+      <column caption='Member Casual' datatype='string' name='[member_casual]' role='dimension' type='nominal' />
+      <column caption='Ride Id' datatype='string' name='[ride_id]' role='dimension' type='nominal' />
+      <column caption='Rideable Type' datatype='string' name='[rideable_type]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Start Lat' datatype='real' name='[start_lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Start Lng' datatype='real' name='[start_lng]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Start Station Id' datatype='string' name='[start_station_id]' role='dimension' type='nominal' />
+      <column caption='Start Station Name' datatype='string' name='[start_station_name]' role='dimension' type='nominal' />
+      <column caption='Started At' datatype='datetime' name='[started_at]' role='dimension' type='ordinal' />
+      <column-instance column='[end_station_name]' derivation='None' name='[none:end_station_name:nk]' pivot='key' type='nominal' />
+      <column-instance column='[start_station_id]' derivation='None' name='[none:start_station_id:nk]' pivot='key' type='nominal' />
+      <column-instance column='[start_station_name]' derivation='None' name='[none:start_station_name:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/tatianafrattale/Documents/My Tableau Repository/Datasources/JC-202109-citibike-tripdata.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>ride_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ride_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ride_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>JC-202109-citibike-tripdata.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>97290</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rideable_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[rideable_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rideable_type</remote-alias>
+              <ordinal>1</ordinal>
+              <family>JC-202109-citibike-tripdata.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>started_at</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[started_at]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>started_at</remote-alias>
+              <ordinal>2</ordinal>
+              <family>JC-202109-citibike-tripdata.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>92218</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ended_at</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[ended_at]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ended_at</remote-alias>
+              <ordinal>3</ordinal>
+              <family>JC-202109-citibike-tripdata.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>97290</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start_station_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[start_station_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start_station_name</remote-alias>
+              <ordinal>4</ordinal>
+              <family>JC-202109-citibike-tripdata.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>98</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start_station_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[start_station_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start_station_id</remote-alias>
+              <ordinal>5</ordinal>
+              <family>JC-202109-citibike-tripdata.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>98</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end_station_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[end_station_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end_station_name</remote-alias>
+              <ordinal>6</ordinal>
+              <family>JC-202109-citibike-tripdata.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>89</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end_station_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[end_station_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end_station_id</remote-alias>
+              <ordinal>7</ordinal>
+              <family>JC-202109-citibike-tripdata.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>89</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start_lat</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[start_lat]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start_lat</remote-alias>
+              <ordinal>8</ordinal>
+              <family>JC-202109-citibike-tripdata.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>160</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start_lng</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[start_lng]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start_lng</remote-alias>
+              <ordinal>9</ordinal>
+              <family>JC-202109-citibike-tripdata.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>160</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end_lat</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[end_lat]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end_lat</remote-alias>
+              <ordinal>10</ordinal>
+              <family>JC-202109-citibike-tripdata.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>189</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end_lng</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[end_lng]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end_lng</remote-alias>
+              <ordinal>11</ordinal>
+              <family>JC-202109-citibike-tripdata.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>205</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>member_casual</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[member_casual]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>member_casual</remote-alias>
+              <ordinal>12</ordinal>
+              <family>JC-202109-citibike-tripdata.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:start_station_id:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;HB303&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;JC009&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;JC057&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;JC103&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;HB101&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;HB507&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;JC034&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;JC081&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;HB202&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;JC003&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;JC052&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;JC095&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;HB402&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;JC018&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;JC066&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;JC107&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;HB304&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;JC011&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;JC059&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;JC104&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;HB203&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;JC005&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;JC053&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;JC098&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;HB505&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;JC027&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;JC078&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;HB102&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;HB601&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;JC035&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;JC082&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;HB502&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;JC023&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;JC076&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;HB301&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;JC006&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;JC055&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;JC099&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;HB404&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;JC019&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;JC072&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;JC108&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;HB405&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;JC020&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;JC074&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;HB503&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;JC024&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;JC077&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;HB506&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;JC032&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;JC080&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;HB305&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;JC013&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;JC063&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;JC105&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;HB302&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;JC008&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;JC056&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;JC102&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;HB103&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;HB603&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;JC038&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;JC084&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;HB501&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;JC022&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;JC075&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;HB401&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;JC014&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;JC065&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;JC106&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;HB201&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;JC002&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;JC051&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;JC094&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:start_station_name:nk]' type='palette'>
+            <map to='#2c5985'>
+              <bucket>&quot;Grove St PATH&quot;</bucket>
+            </map>
+            <map to='#347ea1'>
+              <bucket>&quot;Hamilton Park&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;14 St Ferry - 14 St &amp; Shipyard Ln&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Glenwood Ave&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Liberty Light Rail&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Southwest Park - Jackson St &amp; Observer Hwy&quot;</bucket>
+            </map>
+            <map to='#4ba5ba'>
+              <bucket>&quot;Hoboken Ave at Monmouth St&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;4 St &amp; Grand St&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Clinton St &amp; 7 St&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;8 St &amp; Washington St&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Communipaw &amp; Berry Lane&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Jersey &amp; 6th St&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Pershing Field&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Bergen Ave&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Grant Ave &amp; MLK Dr&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Mama Johnson Field - 4 St &amp; Jackson St&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Washington St&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Adams St &amp; 11 St&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Grand St&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Lincoln Park&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Union St&quot;</bucket>
+            </map>
+            <map to='#89c8cc'>
+              <bucket>&quot;Hoboken Terminal - Hudson St &amp; Hudson Pl&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;9 St HBLR - Jackson St &amp; 8 St&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Dey St&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Journal Square&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Riverview Park&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Church Sq Park - 5 St &amp; Park Ave&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Morris Canal&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;5 Corners Library&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Columbus Dr at Exchange Pl&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Jackson Square&quot;</bucket>
+            </map>
+            <map to='#ae123a'>
+              <bucket>&quot;Hoboken Terminal - River St &amp; Hudson Pl&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Brunswick St&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Heights Elevator&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Monmouth and 6th&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;11 St &amp; Washington St&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Dixon Mills&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Lafayette Park&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Bergen Ave &amp; Stegman St&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Manila &amp; 1st&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Willow Ave &amp; 12 St&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Bloomfield St &amp; 15 St&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Christ Hospital&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Hilltop&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Montgomery St&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;City Hall&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Newark Ave&quot;</bucket>
+            </map>
+            <map to='#da323f'>
+              <bucket>&quot;Marin Light Rail&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Astor Place&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Grand St &amp; 2 St&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Madison St &amp; 1 St&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Van Vorst Park&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;12 St &amp; Sinatra Dr N&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Essex Light Rail&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Leonard Gordon Park&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;6 St &amp; Grand St&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Columbus Drive&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;JC Medical Center&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Oakland Ave&quot;</bucket>
+            </map>
+            <map to='#f36754'>
+              <bucket>&quot;Newport PATH&quot;</bucket>
+            </map>
+            <map to='#f89217'>
+              <bucket>&quot;South Waterfront Walkway - Sinatra Dr &amp; 1 St&quot;</bucket>
+            </map>
+            <map to='#f8b620'>
+              <bucket>&quot;Sip Ave&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Brunswick &amp; 6th&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Harborside&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;McGinley Square&quot;</bucket>
+            </map>
+            <map to='#fb9984'>
+              <bucket>&quot;Newport Pkwy&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Baldwin at Montgomery&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Grand St &amp; 14 St&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Madison St &amp; 10 St&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Warren St&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;7 St &amp; Monroe St&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Columbus Park - Clinton St &amp; 9 St&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Jersey &amp; 3rd&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Paulus Hook&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:end_station_name:nk]' type='palette'>
+            <map to='#2c5985'>
+              <bucket>&quot;14 St Ferry - 14 St &amp; Shipyard Ln&quot;</bucket>
+            </map>
+            <map to='#347ea1'>
+              <bucket>&quot;Grove St PATH&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;8 Ave &amp; W 33 St&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Broad St &amp; Water St&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;E 20 St &amp; 2 Ave&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;McGinley Square&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Stanton St &amp; Chrystie St&quot;</bucket>
+            </map>
+            <map to='#4ba5ba'>
+              <bucket>&quot;Hamilton Park&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Allen St &amp; Rivington St&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Columbus Dr at Exchange Pl&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Lincoln Park&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Paulus Hook&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Washington St&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;6 Ave &amp; W 33 St&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Bedford Ave &amp; Bergen St&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Dey St&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Heights Elevator&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Madison St &amp; 10 St&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;South St &amp; Gouverneur Ln&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;11 Ave &amp; W 59 St&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Cabrini Blvd &amp; W 177 St&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Grand St&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Jersey &amp; 3rd&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Murray St &amp; West St&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;W 15 St &amp; 6 Ave&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;8 St &amp; Washington St&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Broadway &amp; W 160 St&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Essex Light Rail&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Jackson Square&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Monmouth and 6th&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Union St&quot;</bucket>
+            </map>
+            <map to='#89c8cc'>
+              <bucket>&quot;Hoboken Ave at Monmouth St&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;6 Ave &amp; W 45 St&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Bergen Ave&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Dixon Mills&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Hilltop&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Mama Johnson Field - 4 St &amp; Jackson St&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Adams St &amp; 11 St&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Cleveland Pl &amp; Spring St&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Greenwich St &amp; Hubert St&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Leonard Gordon Park&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Oakland Ave&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;W Broadway &amp; Spring St&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;4 St &amp; Grand St&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Astor Place&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Columbus Drive&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Little West St &amp; 1 Pl&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Pershing Field&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Willow Ave &amp; 12 St&quot;</bucket>
+            </map>
+            <map to='#ae123a'>
+              <bucket>&quot;Hoboken Terminal - Hudson St &amp; Hudson Pl&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Church Sq Park - 5 St &amp; Park Ave&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Grant Ave &amp; MLK Dr&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Lafayette St &amp; Jersey St&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;W 52 St &amp; 11 Ave&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;6 St &amp; Grand St&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Bergen Ave &amp; Stegman St&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;E 5 St &amp; Cooper Sq&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Manila &amp; 1st&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Southwest Park - Jackson St &amp; Observer Hwy&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;11 St &amp; Washington St&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Central Park West &amp; W 68 St&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Grand St &amp; 2 St&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Jersey &amp; 6th St&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Myrtle Ave &amp; St Edwards St&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;W 33 St &amp; 7 Ave&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;12 Ave &amp; W 40 St&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Christ Hospital&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Grand St &amp; 14 St&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Journal Square&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Newark Ave&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;W 42 St &amp; Dyer Ave&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;34 Ave &amp; 38 St&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;City Hall&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Great Jones St&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Laight St &amp; Hudson St&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;North Moore St &amp; Greenwich St&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;W 168th S &amp; Fort Washington Ave&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Albany St &amp; Greenwich St&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Clinton St &amp; 7 St&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Greenwich St &amp; W Houston St&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Liberty Light Rail&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Old Slip &amp; South St&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Warren St&quot;</bucket>
+            </map>
+            <map to='#da323f'>
+              <bucket>&quot;Hoboken Terminal - River St &amp; Hudson Pl&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;9 St HBLR - Jackson St &amp; 8 St&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Brunswick &amp; 6th&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Fort Washington Ave &amp; W 173 St&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;JC Medical Center&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Montgomery St&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Van Vorst Park&quot;</bucket>
+            </map>
+            <map to='#f0751e'>
+              <bucket>&quot;Newport Pkwy&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;7 St &amp; Monroe St&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Bloomfield St &amp; 15 St&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;E 11 St &amp; 1 Ave&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Spring St &amp; Hudson St&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;5 Corners Library&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Baldwin at Montgomery&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Columbus Park - Clinton St &amp; 9 St&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Harborside&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Madison Ave &amp; E 26 St&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Riverview Park&quot;</bucket>
+            </map>
+            <map to='#f36754'>
+              <bucket>&quot;Marin Light Rail&quot;</bucket>
+            </map>
+            <map to='#f7a84a'>
+              <bucket>&quot;South Waterfront Walkway - Sinatra Dr &amp; 1 St&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;12 St &amp; Sinatra Dr N&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Christopher St &amp; Greenwich St&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Grand St &amp; Elizabeth St&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Lafayette Park&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;W 48 St &amp; Rockefeller Plaza&quot;</bucket>
+            </map>
+            <map to='#fb9984'>
+              <bucket>&quot;Newport PATH&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;10 Ave &amp; W 14 St&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Brunswick St&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Glenwood Ave&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;JCBS Depot&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Morris Canal&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Vesey Pl &amp; River Terrace&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;6 Ave &amp; Broome St&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Barrow St &amp; Hudson St&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Communipaw &amp; Berry Lane&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Harrison St &amp; Hudson St&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Madison St &amp; 1 St&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Sip Ave&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='JC-202109-citibike-tripdata.csv' id='JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C'>
+            <properties context=''>
+              <relation connection='textscan.1hi13gw0nl7ilc16j4lj31k33lxx' name='JC-202109-citibike-tripdata.csv' table='[JC-202109-citibike-tripdata#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='ride_id' ordinal='0' />
+                  <column datatype='string' name='rideable_type' ordinal='1' />
+                  <column datatype='datetime' name='started_at' ordinal='2' />
+                  <column datatype='datetime' name='ended_at' ordinal='3' />
+                  <column datatype='string' name='start_station_name' ordinal='4' />
+                  <column datatype='string' name='start_station_id' ordinal='5' />
+                  <column datatype='string' name='end_station_name' ordinal='6' />
+                  <column datatype='string' name='end_station_id' ordinal='7' />
+                  <column datatype='real' name='start_lat' ordinal='8' />
+                  <column datatype='real' name='start_lng' ordinal='9' />
+                  <column datatype='real' name='end_lat' ordinal='10' />
+                  <column datatype='real' name='end_lng' ordinal='11' />
+                  <column datatype='string' name='member_casual' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Most Popular Start Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='JC-202109-citibike-tripdata' name='federated.133t8g60ye57ed146fmqd1obvfx5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.133t8g60ye57ed146fmqd1obvfx5'>
+            <_.fcp.ObjectModelTableType.true...column caption='JC-202109-citibike-tripdata.csv' datatype='table' name='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start_station_name]' derivation='None' name='[none:start_station_name:nk]' pivot='key' type='nominal' />
+            <column caption='Start Station Name' datatype='string' name='[start_station_name]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='JC-202109-citibike-tripdata.csv' datatype='integer' name='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_station_name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' palette='red_blue_white_diverging_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' value='Number of Rides'>
+              <formatted-text>
+                <run>Number of Rides</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' />
+              <text column='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#72b966' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]</rows>
+        <cols>[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_station_name:nk]</cols>
+      </table>
+      <simple-id uuid='{CF62516E-03CB-48B8-A366-DB7229C2AAD6}' />
+    </worksheet>
+    <worksheet name='Sheet 10'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Map of End Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='JC-202109-citibike-tripdata' name='federated.133t8g60ye57ed146fmqd1obvfx5' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.133t8g60ye57ed146fmqd1obvfx5'>
+            <_.fcp.ObjectModelTableType.true...column caption='JC-202109-citibike-tripdata.csv' datatype='table' name='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Avg' caption='End Lat' datatype='real' name='[end_lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='End Lng' datatype='real' name='[end_lng]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='End Station Name' datatype='string' name='[end_station_name]' role='dimension' type='nominal' />
+            <column-instance column='[end_lat]' derivation='None' name='[none:end_lat:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[end_lng]' derivation='None' name='[none:end_lng:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[end_station_name]' derivation='None' name='[none:end_station_name:nk]' pivot='key' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='JC-202109-citibike-tripdata.csv' datatype='integer' name='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_lng:qk]' field-type='quantitative' max='-8236381.4018620485' min='-8246525.2439672621' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_lat:qk]' field-type='quantitative' max='4980728.0718162553' min='4966236.8684633086' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' field-type='quantitative' max-size='1' min-size='0' type='quantsize' />
+            <encoding attr='color' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' palette='red_blue_white_diverging_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='size' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' value='Number of Rides'>
+              <formatted-text>
+                <run>Number of Rides</run>
+              </formatted-text>
+            </format>
+            <format attr='color' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' value='Number of Rides'>
+              <formatted-text>
+                <run>Number of Rides</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='streets' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' />
+              <size column='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' />
+              <text column='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_station_name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.6433784961700439' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_lat:qk]</rows>
+        <cols>[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_lng:qk]</cols>
+      </table>
+      <simple-id uuid='{2AF6721F-AC53-42FF-AD7A-5C462E7CFB58}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Map of Start Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='JC-202109-citibike-tripdata' name='federated.133t8g60ye57ed146fmqd1obvfx5' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.133t8g60ye57ed146fmqd1obvfx5'>
+            <_.fcp.ObjectModelTableType.true...column caption='JC-202109-citibike-tripdata.csv' datatype='table' name='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start_lat]' derivation='None' name='[none:start_lat:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start_lng]' derivation='None' name='[none:start_lng:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start_station_name]' derivation='None' name='[none:start_station_name:nk]' pivot='key' type='nominal' />
+            <column aggregation='Avg' caption='Start Lat' datatype='real' name='[start_lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Start Lng' datatype='real' name='[start_lng]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Start Station Name' datatype='string' name='[start_station_name]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='JC-202109-citibike-tripdata.csv' datatype='integer' name='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' included-values='in-range' />
+          <slices>
+            <column>[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_lng:qk]' field-type='quantitative' max='-8240605.5209729047' min='-8243707.5672270237' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_lat:qk]' field-type='quantitative' max='4972613.2084533647' min='4970611.7751924843' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' palette='red_blue_diverging_10_0' type='interpolated' />
+            <encoding attr='size' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' field-type='quantitative' max-size='1' min-size='0' type='quantsize' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='size' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' value='Number of Rides'>
+              <formatted-text>
+                <run>Number of Rides</run>
+              </formatted-text>
+            </format>
+            <format attr='color' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' value='Number of Rides'>
+              <formatted-text>
+                <run>Number of Rides</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='streets' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' />
+              <size column='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' />
+              <text column='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_station_name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='2.491452693939209' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_lat:qk]</rows>
+        <cols>[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_lng:qk]</cols>
+      </table>
+      <simple-id uuid='{9B4F731E-A993-4833-893C-4A0F5E882B6A}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Most Popular Start Time for the Top 10 Start Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='JC-202109-citibike-tripdata' name='federated.133t8g60ye57ed146fmqd1obvfx5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.133t8g60ye57ed146fmqd1obvfx5'>
+            <_.fcp.ObjectModelTableType.true...column caption='JC-202109-citibike-tripdata.csv' datatype='table' name='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[started_at]' derivation='Hour' name='[hr:started_at:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start_station_name]' derivation='None' name='[none:start_station_name:nk]' pivot='key' type='nominal' />
+            <column caption='Start Station Name' datatype='string' name='[start_station_name]' role='dimension' type='nominal' />
+            <column caption='Started At' datatype='datetime' name='[started_at]' role='dimension' type='ordinal' />
+            <_.fcp.ObjectModelTableType.false...column caption='JC-202109-citibike-tripdata.csv' datatype='integer' name='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' included-values='in-range' />
+          <filter class='categorical' column='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_station_name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:start_station_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_station_name:nk]</column>
+            <column>[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_station_name:nk]' />
+              <text column='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]</rows>
+        <cols>[federated.133t8g60ye57ed146fmqd1obvfx5].[hr:started_at:qk]</cols>
+      </table>
+      <simple-id uuid='{BFD83F63-6CA1-4264-9FA1-5144AE98CEFA}' />
+    </worksheet>
+    <worksheet name='Sheet 7'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Most Popular End Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='JC-202109-citibike-tripdata' name='federated.133t8g60ye57ed146fmqd1obvfx5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.133t8g60ye57ed146fmqd1obvfx5'>
+            <_.fcp.ObjectModelTableType.true...column caption='JC-202109-citibike-tripdata.csv' datatype='table' name='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' pivot='key' type='quantitative' />
+            <column caption='End Station Name' datatype='string' name='[end_station_name]' role='dimension' type='nominal' />
+            <column-instance column='[end_station_name]' derivation='None' name='[none:end_station_name:nk]' pivot='key' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='JC-202109-citibike-tripdata.csv' datatype='integer' name='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_station_name:nk]'>
+            <groupfilter expression='COUNT([__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]) &gt;= 90' function='filter' user:ui-filter-by-field='true' user:ui-marker='filter-by'>
+              <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;10 Ave &amp; W 14 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;11 Ave &amp; W 59 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;11 St &amp; Washington St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;12 Ave &amp; W 40 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;12 St &amp; Sinatra Dr N&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;14 St Ferry - 14 St &amp; Shipyard Ln&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;34 Ave &amp; 38 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;4 St &amp; Grand St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;5 Corners Library&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;6 Ave &amp; Broome St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;6 Ave &amp; W 33 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;6 Ave &amp; W 45 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;6 St &amp; Grand St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;7 St &amp; Monroe St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;8 Ave &amp; W 33 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;8 St &amp; Washington St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;9 St HBLR - Jackson St &amp; 8 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Adams St &amp; 11 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Albany St &amp; Greenwich St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Allen St &amp; Rivington St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Astor Place&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Baldwin at Montgomery&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Barrow St &amp; Hudson St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Bedford Ave &amp; Bergen St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Bergen Ave&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Bergen Ave &amp; Stegman St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Bloomfield St &amp; 15 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Broad St &amp; Water St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Broadway &amp; W 160 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Brunswick &amp; 6th&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Brunswick St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Cabrini Blvd &amp; W 177 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Central Park West &amp; W 68 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Christ Hospital&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Christopher St &amp; Greenwich St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Church Sq Park - 5 St &amp; Park Ave&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;City Hall&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Cleveland Pl &amp; Spring St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Clinton St &amp; 7 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Columbus Dr at Exchange Pl&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Columbus Drive&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Columbus Park - Clinton St &amp; 9 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Communipaw &amp; Berry Lane&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Dey St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Dixon Mills&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;E 11 St &amp; 1 Ave&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;E 20 St &amp; 2 Ave&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;E 5 St &amp; Cooper Sq&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Essex Light Rail&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Fort Washington Ave &amp; W 173 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Glenwood Ave&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Grand St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Grand St &amp; 14 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Grand St &amp; 2 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Grand St &amp; Elizabeth St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Grant Ave &amp; MLK Dr&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Great Jones St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Greenwich St &amp; Hubert St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Greenwich St &amp; W Houston St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Grove St PATH&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Hamilton Park&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Harborside&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Harrison St &amp; Hudson St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Heights Elevator&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Hilltop&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Hoboken Ave at Monmouth St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Hoboken Terminal - Hudson St &amp; Hudson Pl&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Hoboken Terminal - River St &amp; Hudson Pl&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Jackson Square&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;JC Medical Center&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;JCBS Depot&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Jersey &amp; 3rd&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Jersey &amp; 6th St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Journal Square&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Lafayette Park&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Lafayette St &amp; Jersey St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Laight St &amp; Hudson St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Leonard Gordon Park&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Liberty Light Rail&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Lincoln Park&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Little West St &amp; 1 Pl&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Madison Ave &amp; E 26 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Madison St &amp; 1 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Madison St &amp; 10 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Mama Johnson Field - 4 St &amp; Jackson St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Manila &amp; 1st&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Marin Light Rail&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;McGinley Square&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Monmouth and 6th&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Montgomery St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Morris Canal&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Murray St &amp; West St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Myrtle Ave &amp; St Edwards St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Newark Ave&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Newport PATH&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Newport Pkwy&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;North Moore St &amp; Greenwich St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Oakland Ave&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Old Slip &amp; South St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Paulus Hook&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Pershing Field&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Riverview Park&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Sip Ave&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;South St &amp; Gouverneur Ln&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;South Waterfront Walkway - Sinatra Dr &amp; 1 St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Southwest Park - Jackson St &amp; Observer Hwy&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Spring St &amp; Hudson St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Stanton St &amp; Chrystie St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Union St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Van Vorst Park&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Vesey Pl &amp; River Terrace&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;W 15 St &amp; 6 Ave&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;W 168th S &amp; Fort Washington Ave&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;W 33 St &amp; 7 Ave&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;W 42 St &amp; Dyer Ave&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;W 48 St &amp; Rockefeller Plaza&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;W 52 St &amp; 11 Ave&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;W Broadway &amp; Spring St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Warren St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Washington St&quot;' />
+                <groupfilter function='member' level='[none:end_station_name:nk]' member='&quot;Willow Ave &amp; 12 St&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_station_name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_station_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' palette='red_blue_white_diverging_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' value='Number of Rides'>
+              <formatted-text>
+                <run>Number of Rides</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' />
+              <text column='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]</rows>
+        <cols>[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_station_name:nk]</cols>
+      </table>
+      <simple-id uuid='{93621191-2102-4A2A-867C-030B266D96E4}' />
+    </worksheet>
+    <worksheet name='Sheet 8'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Most Popular End Time for the Top 10 End Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='JC-202109-citibike-tripdata' name='federated.133t8g60ye57ed146fmqd1obvfx5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.133t8g60ye57ed146fmqd1obvfx5'>
+            <_.fcp.ObjectModelTableType.true...column caption='JC-202109-citibike-tripdata.csv' datatype='table' name='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' pivot='key' type='quantitative' />
+            <column caption='End Station Name' datatype='string' name='[end_station_name]' role='dimension' type='nominal' />
+            <column caption='Ended At' datatype='datetime' name='[ended_at]' role='dimension' type='ordinal' />
+            <column-instance column='[ended_at]' derivation='Hour' name='[hr:ended_at:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[end_station_name]' derivation='None' name='[none:end_station_name:nk]' pivot='key' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='JC-202109-citibike-tripdata.csv' datatype='integer' name='[__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>459</max>
+          </filter>
+          <filter class='categorical' column='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_station_name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([__tableau_internal_object_id__].[JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C])' function='order' user:ui-marker='order'>
+                <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+                  <groupfilter function='level-members' level='[none:end_station_name:nk]' />
+                  <groupfilter function='member' level='[none:end_station_name:nk]' member='%null%' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_station_name:nk]</column>
+            <column>[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_station_name:nk]' />
+              <text column='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]</rows>
+        <cols>[federated.133t8g60ye57ed146fmqd1obvfx5].[hr:ended_at:ok]</cols>
+      </table>
+      <simple-id uuid='{3C706A96-BE9D-4AF0-BABD-AAF869516855}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Analysis of Start Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='28' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='25' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+              <zone h='98000' id='14' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone h='5250' id='15' type-v2='title' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='92750' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='6250'>
+                  <zone h='92750' id='5' type-v2='layout-basic' w='49200' x='800' y='6250'>
+                    <zone h='46375' id='3' name='Sheet 1' w='49200' x='800' y='6250'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='46375' id='26' name='Sheet 5' w='49200' x='800' y='52625'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                  <zone fixed-size='492' h='92750' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='49200' x='50000' y='6250'>
+                    <zone h='92750' id='22' name='Sheet 4' w='49200' x='50000' y='6250'>
+                      <layout-cache minheight='244' minwidth='202' type-h='scalable' type-w='scalable' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run>Analysis of Start Stations</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='62' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='61' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone h='5250' id='15' type-v2='title' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46375' id='3' is-fixed='true' name='Sheet 1' w='49200' x='800' y='6250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='92750' id='22' is-fixed='true' name='Sheet 4' w='49200' x='50000' y='6250'>
+                  <layout-cache minheight='244' minwidth='202' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46375' id='26' is-fixed='true' name='Sheet 5' w='49200' x='800' y='52625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{9F1F6602-CA76-47DF-B310-114F5E73A5C4}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Analysis of End Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='26' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='5250' id='27' type-v2='title' w='98400' x='800' y='1000'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='92750' id='24' param='horz' type-v2='layout-flow' w='98400' x='800' y='6250'>
+              <zone h='92750' id='21' param='horz' type-v2='layout-flow' w='98400' x='800' y='6250'>
+                <zone h='92750' id='18' param='horz' type-v2='layout-flow' w='98400' x='800' y='6250'>
+                  <zone h='92750' id='15' param='horz' type-v2='layout-flow' w='98400' x='800' y='6250'>
+                    <zone h='92750' id='12' param='horz' type-v2='layout-flow' w='98400' x='800' y='6250'>
+                      <zone h='92750' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='6250'>
+                        <zone h='92750' id='5' type-v2='layout-basic' w='98400' x='800' y='6250'>
+                          <zone h='46375' id='3' name='Sheet 7' w='49200' x='800' y='6250'>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='4' />
+                            </zone-style>
+                          </zone>
+                          <zone h='92750' id='16' name='Sheet 10' w='49200' x='50000' y='6250'>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='4' />
+                            </zone-style>
+                          </zone>
+                          <zone h='46375' id='19' name='Sheet 8' w='49200' x='800' y='52625'>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='4' />
+                            </zone-style>
+                          </zone>
+                        </zone>
+                      </zone>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run>Analysis of End Stations</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='49' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='48' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone h='5250' id='27' type-v2='title' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46375' id='3' is-fixed='true' name='Sheet 7' w='49200' x='800' y='6250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='92750' id='16' is-fixed='true' name='Sheet 10' w='49200' x='50000' y='6250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46375' id='19' is-fixed='true' name='Sheet 8' w='49200' x='800' y='52625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{9FEBBA8C-2E45-41BF-8C52-A63D997F9A71}' />
+    </dashboard>
+    <dashboard name='Story 1' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Most Popular Start Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type-v2='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type-v2='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='2' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='Sheet 1' id='2' />
+                  <story-point captured-sheet='Sheet 4' id='1'>
+                    <capturedDeltas>
+                      <worksheet name='Sheet 4'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_lat:qk]' field-type='quantitative' max='4976112.0115275458' min='4965656.1512524206' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_lng:qk]' field-type='quantitative' max='-8237348.9096055208' min='-8248145.8641753336' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point captured-sheet='Sheet 5' id='3' />
+                  <story-point captured-sheet='Dashboard 1' id='4' />
+                  <story-point captured-sheet='Sheet 7' id='5' />
+                  <story-point captured-sheet='Sheet 8' id='6' />
+                  <story-point captured-sheet='Sheet 10' id='7' />
+                  <story-point captured-sheet='Dashboard 2' id='8'>
+                    <capturedDeltas>
+                      <worksheet name='Sheet 10'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_lat:qk]' field-type='quantitative' max='4980987.1841695309' min='4963303.3464637203' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_lng:qk]' field-type='quantitative' max='-8235414.3575666286' min='-8247793.0436655637' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='9959' id='6' story-point-id='2' type-v2='text' w='33268' x='31299' y='26763'>
+          <formatted-text>
+            <run fontalignment='0' fontcolor='#000000' fontname='Benton Sans Book'>In this bar chart, the Start Stations are arranged in descending order according to how many rides were started at each station. </run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='14834' hidden='true' id='7' story-point-id='1' type-v2='text' w='33268' x='6496' y='17635'>
+          <formatted-text>
+            <run fontalignment='0'>On this map, the circles range from red to blue. As the number of rides per start station increases, the circles grow larger in size and change from red to blue.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' h='8402' hidden='true' id='8' story-point-id='3' type-v2='text' w='33268' x='17913' y='25311'>
+          <formatted-text>
+            <run fontalignment='0'>This graphic shows the top 10 start stations and how many rides were initiated at each station every hour.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' h='11203' hidden='true' id='9' story-point-id='5' type-v2='text' w='33268' x='37894' y='30083'>
+          <formatted-text>
+            <run fontalignment='0'>This bar chart shows all of the End Stations arranged in descending order according to how many rides were ended at each station.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' h='8402' hidden='true' id='10' story-point-id='6' type-v2='text' w='33268' x='62894' y='46784'>
+          <formatted-text>
+            <run fontalignment='0'>This graphic shows the top 10 end stations and how many rides were ended at each station every hour.</run>
+          </formatted-text>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='14004' hidden='true' id='11' story-point-id='7' type-v2='text' w='33268' x='4528' y='21266'>
+          <formatted-text>
+            <run fontalignment='0'>On this map, the circles range from red to blue. As the number of rides per end station increases, the circles grow larger in size and change from red to blue.</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <simple-id uuid='{DC55A6D5-0B58-4D01-964E-C59980E27DDB}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{332C17D7-CBEC-46E8-A292-26CA8415F2F1}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{496841C8-593C-4E9C-AA5F-1BE9188901BB}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' show-domain='false' show-null-ctrls='false' show-title='false' type='filter' />
+            <card pane-specification-id='1' param='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_station_name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0B2786B5-3330-41F1-9F55-FCB88AE34182}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 4'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='1' />
+        </viewpoint>
+        <viewpoint name='Sheet 5'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{CE9A6073-9FC9-4BBF-9D6B-0C2D0452E462}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A4A63090-1176-4B76-BCC9-DD67FDEB5161}' />
+    </window>
+    <window class='worksheet' name='Sheet 8'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:end_station_name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{420CF6AE-7D5A-486F-B27F-FF4D13B83111}' />
+    </window>
+    <window class='worksheet' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{2CB5F159-3C87-4CD5-A777-DC1D1B4B60AF}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Sheet 10'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 7'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 8'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{CF063C6D-C0A4-44F1-9480-CE8BFAE04B44}' />
+    </window>
+    <window class='dashboard' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{938D4E9A-17AD-4EDE-B035-CCE6FE693A27}' />
+    </window>
+  </windows>
+</workbook>
