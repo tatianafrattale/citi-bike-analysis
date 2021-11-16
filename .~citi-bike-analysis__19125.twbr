@@ -1534,8 +1534,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_lng:qk]' field-type='quantitative' max='-8240605.5209729047' min='-8243707.5672270237' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_lat:qk]' field-type='quantitative' max='4972613.2084533647' min='4970611.7751924843' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_lng:qk]' field-type='quantitative' max='-8229748.3590834886' min='-8254564.7291164398' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[none:start_lat:qk]' field-type='quantitative' max='4979618.2248664461' min='4963606.7587794028' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='mark'>
             <encoding attr='color' field='[federated.133t8g60ye57ed146fmqd1obvfx5].[__tableau_internal_object_id__].[cnt:JC-202109-citibike-tripdata.csv_55EDE47383AF42B9A901AF66F86EDF8C:qk]' palette='red_blue_diverging_10_0' type='interpolated' />
